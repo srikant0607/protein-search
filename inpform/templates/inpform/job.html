@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DNA Search App</title>
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center">
+            <div class="jumbotron text-center col-md-7">
+                <h2>Protein Search</h2>
+                <br><br>
+                <p><i>{{ message }}</i></p>
+                <br>
+                <form action="{% url 'inpform:run' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                <input type="submit" value="Submit">
+                </form>
+                <br>
+                <a href="{% url 'inpform:monitor' %}">
+                    <button class="btn-info">Check Results</button>
+                </a>
+                <br><br>
+                <h6>(Check if entered DNA sequence codes for a protein)</h6>
+            </div>
+        </div>
+    </body>
+</html>

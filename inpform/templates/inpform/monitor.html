@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center">
+            <div class="jumbotron text-center col-md-7">
+                <table>
+                    <tbody>
+                    {% for match, state, progress, id in info %}
+                        <tr>
+                            <td>{{ id }}{{ ' ' }}{{ match }}</td>
+
+                            <td style="width:50%;">
+                                <div class="progress" >
+                                    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%"
+                                         aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="50">{{ state }}
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            <br><br>
+            <a href="{% url 'inpform:run' %}"><button class="btn-dark">Back to Home</button></a>
+            </div>
+        </div>
+    </body>
+</html>

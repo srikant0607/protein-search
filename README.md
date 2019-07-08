@@ -9,4 +9,6 @@ biopython v1.73 (uses an api key that can be generated from your NCBI account - 
 - Start celery worker: (venv) $ celery worker -A SearchDNA --loglevel=info
 - Run application: (venv) $ python manage.py runserver
 
+- Uses the reverse complement DNA strand sequence as input that can be pasted in the field
+
 http://127.0.0.1:8000/inpform/run/

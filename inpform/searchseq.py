@@ -5,7 +5,7 @@ from Bio.Alphabet import IUPAC
 
 def searchdna(txt_input):
 
-    Entrez.api_key = "083f0bb35cdf428d071a00f4b76ab0a4a909"
+    Entrez.api_key = "xxxxxxxxx"
     Entrez.email = "sarangi.srikant@gmail.com"
 
     # List of organisms/ genomes to search against

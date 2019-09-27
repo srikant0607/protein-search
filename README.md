@@ -1,4 +1,6 @@
 # protein-search
+# This app can be used to search whether a DNA sequence (reverse complement) is a coding region. Currently, this searches only a small list of nucleotides listed below
+
 celery v4.3.0; redis v5.0.5 - to queue and manage requests
 
 django v2.2.3
